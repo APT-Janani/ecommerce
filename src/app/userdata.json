@@ -1,0 +1,40 @@
+{
+  "userdata": [
+    {
+      "username": "hello@email.com",
+      "password": "123",
+      "Re_enter_password": "123",
+      "id": 1
+    },
+    {
+      "username": "hello@email",
+      "password": "123",
+      "Re_enter_password": "123",
+      "id": 2
+    },
+    {
+      "username": "hello@email.com",
+      "password": "1234",
+      "Re_enter_password": "1234",
+      "id": 3
+    },
+    {
+      "username": "hello@email.com",
+      "password": "1234",
+      "Re_enter_password": "1234",
+      "id": 4
+    },
+    {
+      "username": "hello@email.com",
+      "password": "wer",
+      "Re_enter_password": "wer",
+      "id": 5
+    },
+    {
+      "username": "janani@gmail.com",
+      "password": "hello",
+      "Re_enter_password": "hello",
+      "id": 6
+    }
+  ]
+}

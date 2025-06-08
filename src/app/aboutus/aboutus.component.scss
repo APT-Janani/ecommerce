@@ -1,0 +1,82 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.hero-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #007BFF;
+}
+
+.core-values .row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.core-values .col-md-4 {
+    text-align: center;
+}
+
+.core-values h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.why-choose-us ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.why-choose-us li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.our-team .team-members {
+    display: flex;
+    justify-content: space-around;
+}
+
+.our-team .team-member {
+    text-align: center;
+}
+
+.our-team img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.contact-us p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}

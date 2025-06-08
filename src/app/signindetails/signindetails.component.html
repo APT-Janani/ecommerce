@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">New User Registration</h2>
+    <form action="" >
+        <div class="mb-3">
+            <label for="username" class="form-label" >Username</label>
+            <input type="text" class="form-control" [(ngModel)]="rec.Username" id="username" placeholder="Enter username">
+        </div>
+
+        <div class="mb-3">
+            <label for="shopName" class="form-label" >Shop Name</label>
+            <input type="text" class="form-control" [(ngModel)]="rec.shopName" id="shopName" placeholder="Enter shop name">
+        </div>
+
+        <div class="mb-3">
+            <label for="mobileNumber" class="form-label">Mobile Number</label>
+            <input type="number" class="form-control" [(ngModel)]="rec.mobileNumber" id="mobileNumber" placeholder="Enter mobile number">
+        </div>
+
+        <div class="mb-3">
+            <label for="shopLocation" class="form-label">Shop Location</label>
+            <select [(ngModel)]="rec.shopLocation" class="form-select" id="shopLocation">
+                <option value="Karaikudi">Karaikudi</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Salem">Salem</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Thanjavur">Thanjavur</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Erode">Erode</option>
+                <option value="Cuddalore">Cuddalore</option>
+                <option value="Tiruvannamalai">Tiruvannamalai</option>
+                <option value="Nagapattinam">Nagapattinam</option>
+                <option value="Karur">Karur</option>
+                <option value="Virudhunagar">Virudhunagar</option>
+                <option value="Perambalur">Perambalur</option>
+            </select>
+        </div>
+
+        <div class="d-grid gap-2 mt-4">
+            <button type="submit" (click)="submit()" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

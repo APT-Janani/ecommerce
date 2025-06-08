@@ -1,0 +1,77 @@
+<style>
+    .profile-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    .profile-header {
+        text-align: center;
+    }
+
+    .profile-header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    .profile-header h1 {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    .profile-info p {
+        font-size: 1.1rem;
+        margin: 8px 0;
+        color: #555;
+    }
+
+    .profile-actions a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 1rem;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #17a2b8;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .profile-actions a:hover {
+        background-color: #138496;
+    }
+
+    .profile-actions a:active {
+        background-color: #0d6efd;
+    }
+</style>
+
+<div class="container">
+    <div class="profile-container">
+
+        <div class="profile-header">
+            <img src="profile.avif" alt="Profile Picture"> 
+            <h1></h1> 
+        </div>
+
+    
+        <div class="profile-info">
+            <p><strong>Username:</strong></p> 
+            <p><strong>Email:</strong> </p> 
+        </div>
+
+        <div class="profile-actions">
+            <a href="/edit-profile">Edit Profile</a>
+            <a href="/change-password">Change Password</a>
+            <a href="/orders">View Orders</a>
+            <a href="/logout">Log Out</a>
+        </div>
+    </div>
+</div>

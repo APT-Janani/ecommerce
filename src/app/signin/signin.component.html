@@ -1,0 +1,50 @@
+<style>
+    .signupbox {
+        background-color: #e7d1a5;
+        width: 25%;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+    }
+    .position{
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        padding: 50px 70px;
+    }
+    .login-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        border: none;
+        color: white;
+    }
+    .confirm-btn{
+        border: none;
+        background-color: #95a098;
+        width: 35%;
+        height: 15%;
+        font-size: 9px;
+        color: white;
+        
+    }
+</style>
+<div class="position  ">
+    <div class="container-fluid mb-4 signupbox center ">
+        <h1 class="container-fluid text-center mt-4 mb-4">Sign-up</h1>
+        <form #formInstance="ngForm">
+            <div class="mb-3">
+                <label>Username</label>
+                <input class="form-control" type="email" name="Username" required email id="Username" placeholder="Enter email" [(ngModel)]="rec.username" ngModel #username="ngModel">
+            </div>
+            <div class="mb-3">
+                <label>Password</label>
+                <input class="form-control" type="Password" name="Password" required id="Password" placeholder="Create_password" [(ngModel)]="rec.password" >
+            </div>
+            <div class="mb-3">
+                <label>Password</label>
+                <input class="form-control" type="Password" name="Re_Password" required id="Re_Password" placeholder="Re-enter_password" [(ngModel)]="rec.Re_enter_password" >
+            </div>      
+            <button [disabled]="formInstance.invalid" (click)="signin()" class="btn login-btn mb-4">Sign-in</button>
+        </form>
+    </div>
+</div>
