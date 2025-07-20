@@ -1,11 +1,12 @@
 <style>
     .sandal-bg {
         background-color: #e7d1a5;
-        padding: 50px 30px;
+        padding: 40px 30px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 25%;
-        aspect-ratio: 1/1;
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1/1.2;
     }
 
     .form-control {
@@ -23,38 +24,46 @@
     .login-btn:hover {
         background-color: #218838;
     }
+
     .center-container {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    @media (max-width: 576px) {
+        .sandal-bg {
+            aspect-ratio: unset;
+            padding: 30px 20px;
+        }
     }
 </style>
+
 <div class="container-fluid center-container">
-    
-        <div class="sandal-bg">
-            <h1 class="text-center mb-4">Login</h1>
-            <form>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input class="form-control" type="email" required id="username"  name="username"  placeholder="Enter email"  [(ngModel)]="rec.username" >
-                    <div class="text-end">
-                        <a href="">Forgot Username?</a>
-                    </div>
+    <div class="sandal-bg">
+        <h1 class="text-center mb-4">Login</h1>
+        <form>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input class="form-control" type="email" required id="username" name="username"
+                    placeholder="Enter email" [(ngModel)]="rec.username">
+                <div class="text-end">
+                    <a href="">Forgot Username?</a>
                 </div>
+            </div>
 
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input class="form-control" type="password" required id="password" name="password" [(ngModel)]="rec.password" >
-                    <div class="text-end">
-                        <a href="">Forgot Password?</a>
-                    </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input class="form-control" type="password" required id="password" name="password"
+                    [(ngModel)]="rec.password">
+                <div class="text-end">
+                    <a href="">Forgot Password?</a>
                 </div>
+            </div>
 
-                <button type="submit" (click)="login()" class="btn login-btn">Login</button>
-            </form>
-    
-
-       
+            <button type="submit" (click)="login()" class="btn login-btn">Login</button>
+        </form>
     </div>
-</div> 
+</div>

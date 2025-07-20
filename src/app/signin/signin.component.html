@@ -1,50 +1,102 @@
 <style>
     .signupbox {
         background-color: #e7d1a5;
-        width: 25%;
-        aspect-ratio: 1/1;
         border-radius: 10px;
+        padding: 40px 30px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
-    .position{
+
+    .position {
         display: flex;
         align-items: center;
+        justify-content: center;
         min-height: 100vh;
-        padding: 50px 70px;
+        padding: 30px 20px;
     }
+
     .login-btn {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         background-color: #28a745;
         border: none;
         color: white;
+        font-size: 16px;
     }
-    .confirm-btn{
+
+    .login-btn:disabled {
+        background-color: #a3d8ac;
+    }
+
+    .confirm-btn {
         border: none;
         background-color: #95a098;
         width: 35%;
         height: 15%;
         font-size: 9px;
         color: white;
-        
+    }
+
+    @media (max-width: 576px) {
+        .signupbox {
+            padding: 25px 20px;
+        }
     }
 </style>
-<div class="position  ">
-    <div class="container-fluid mb-4 signupbox center ">
-        <h1 class="container-fluid text-center mt-4 mb-4">Sign-up</h1>
+
+<div class="position">
+    <div class="signupbox">
+        <h1 class="text-center mb-4">Sign-up</h1>
         <form #formInstance="ngForm">
             <div class="mb-3">
-                <label>Username</label>
-                <input class="form-control" type="email" name="Username" required email id="Username" placeholder="Enter email" [(ngModel)]="rec.username" ngModel #username="ngModel">
+                <label for="Username" class="form-label">Username</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="Username"
+                    name="Username"
+                    required
+                    placeholder="Enter email"
+                    [(ngModel)]="rec.username"
+                    #username="ngModel"
+                />
             </div>
+
             <div class="mb-3">
-                <label>Password</label>
-                <input class="form-control" type="Password" name="Password" required id="Password" placeholder="Create_password" [(ngModel)]="rec.password" >
+                <label for="Password" class="form-label">Password</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="Password"
+                    name="Password"
+                    required
+                    placeholder="Create password"
+                    [(ngModel)]="rec.password"
+                />
             </div>
+
             <div class="mb-3">
-                <label>Password</label>
-                <input class="form-control" type="Password" name="Re_Password" required id="Re_Password" placeholder="Re-enter_password" [(ngModel)]="rec.Re_enter_password" >
-            </div>      
-            <button [disabled]="formInstance.invalid" (click)="signin()" class="btn login-btn mb-4">Sign-in</button>
+                <label for="Re_Password" class="form-label">Re-enter Password</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="Re_Password"
+                    name="Re_Password"
+                    required
+                    placeholder="Re-enter password"
+                    [(ngModel)]="rec.Re_enter_password"
+                />
+            </div>
+
+            <button
+                type="submit"
+                class="btn login-btn mb-4"
+                [disabled]="formInstance.invalid"
+                (click)="signin()"
+            >
+                Sign in
+            </button>
         </form>
     </div>
 </div>
